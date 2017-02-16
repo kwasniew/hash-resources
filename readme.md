@@ -9,8 +9,8 @@ Turns
 ```
 into
 ```
-<link rel="stylesheet" href="css/styles.css?v=c9a7c7ed62">
-<script src="js/main.js?v=d1a111ea32"></script>
+<link rel="stylesheet" href="css/styles-c9a7c7ed62.css">
+<script src="js/main-d1a111ea32.js"></script>
 ```
 Hash is MD5 of the content.
 
@@ -18,15 +18,22 @@ Hash is MD5 of the content.
 ```
 npm install hash-resources
 ```
-Default settings (link and script tags with query param appended)
+Default settings (link and script tags with -hash appended to file name)
 ```
 hash-resources example/index.html > example/index.after.html
 ```
 
-Explicit selector of substitutions and create new files with hash embedded
+Explicit config matching default settings
 ```
-hash-resources --selectors="link,script" --name="{path}@{hash}.{extension}" example/index.html > example/index.after.html
+hash-resources --selector=link@href --selector=script@src --name="{path}-{hash}{extension}" example/index.html > example/index.after.html
 ```
-path, hash and extension are variables from which you can construct a file name
+Path, hash and extension are variables from which you can construct a file name.
+Extension already contains a dot (.)
+
+Hash in query param
+```
+hash-resources --query=v example/index.html > example/index.after.html
+```
+
 
 
