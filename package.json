@@ -1,0 +1,26 @@
+{
+  "name": "hash-resources",
+  "version": "1.0.0",
+  "description": "Creates hashed version of resources for cache invalidation purposes",
+  "main": "index.js",
+  "bin": {
+    "hash-resources": "cli.js"
+  },
+  "author": "Mateusz Kwasniewski",
+  "license": "BSD",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kwasniew/hash-resources.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kwasniew/hash-resources/issues"
+  },
+  "homepage": "https://github.com/kwasniew/hash-resources",
+  "dependencies": {
+    "cheerio": "0.22.0",
+    "minimist": "1.2.0"
+  }
+}
